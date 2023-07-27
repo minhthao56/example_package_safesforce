@@ -1,4 +1,4 @@
-name: Deploy Salesforce Metadata
+name: Install Package Salesforce
 on:
   push:
     branches:
