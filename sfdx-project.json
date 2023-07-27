@@ -1,0 +1,16 @@
+{
+  "packageDirectories": [
+    {
+      "path": "usermgmt"
+    },
+    {
+      "path": "notimgmt"
+    },
+    {
+      "path": "payment"
+    }
+  ],
+  "name": "manabie",
+  "namespace": "",
+  "sourceApiVersion": "58.0"
+}
