@@ -1,0 +1,125 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "Id": "0Ho5j000000oMCTCA2",
+      "SubscriberPackageId": "0335j0000004w38AAA",
+      "Name": "Expense Manager",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMC9CAM",
+      "SubscriberPackageId": "0335j0000004vphAAA",
+      "Name": "MyPackage",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "Yes",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCdCAM",
+      "SubscriberPackageId": "0335j0000004w3IAAQ",
+      "Name": "notimgmt",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCiCAM",
+      "SubscriberPackageId": "0335j0000004w3NAAQ",
+      "Name": "payment",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCECA2",
+      "SubscriberPackageId": "0335j0000004vuTAAQ",
+      "Name": "User Manager",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCJCA2",
+      "SubscriberPackageId": "0335j0000004vuYAAQ",
+      "Name": "usermgmt",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCOCA2",
+      "SubscriberPackageId": "0335j0000004w33AAA",
+      "Name": "usermgmtv2",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMCYCA2",
+      "SubscriberPackageId": "0335j0000004w3DAAQ",
+      "Name": "usermgmtv3",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    },
+    {
+      "Id": "0Ho5j000000oMC4CAM",
+      "SubscriberPackageId": "0335j0000004vpcAAA",
+      "Name": "YourPackageName",
+      "Description": null,
+      "NamespacePrefix": null,
+      "ContainerOptions": "Unlocked",
+      "ConvertedFromPackageId": null,
+      "Alias": "",
+      "IsOrgDependent": "No",
+      "PackageErrorUsername": null,
+      "CreatedBy": "0055j000007Uk8oAAC"
+    }
+  ],
+  "warnings": [
+    "The \"force package list\" command has been deprecated. Use \"package list\" instead."
+  ]
+}

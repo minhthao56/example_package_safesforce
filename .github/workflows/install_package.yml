@@ -28,14 +28,28 @@ jobs:
         run: | 
           chmod +x scripts/change_default_path.bash
           ./scripts/change_default_path.bash usermgmt
+
+      - name: Check existing package
+        run: | 
+              packageList=$(sfdx force:package:list --json)
+              if echo "$packageList" | jq -e ".result | map(select(.Name == \"usermgmt")) | length == 1" > /dev/null; then
+                echo "Package already exists"
+                export PACKAGE_EXISTS=true
+              else
+                echo "Package does not exist"
+                export PACKAGE_EXISTS=false
+              fi
+
       - name: Create package
+        if: env.PACKAGE_EXISTS == 'false'
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
 
       - name: Create version
+        if: env.PACKAGE_EXISTS == 'true'
         run: |
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
-      - name: Create version
+      - name: Install package
         run: |
           sfdx force:package:install --package "usermgmt@0.1.0-1" -o  dev_org_v8 --installationkey test1234 --wait 10 --publishwait 10
