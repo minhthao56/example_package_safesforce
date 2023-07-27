@@ -1,0 +1,37 @@
+name: Deploy Salesforce Metadata
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Salesforce CLI in NodeJS
+        run: |
+          sudo apt-get install curl
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+          sudo apt-get install nodejs
+          node -v
+          npm install @salesforce/cli --global
+
+      - name: Set up Salesforce CLI using JWT flow
+        run: |
+          echo "${{ secrets.JWT_PRIVATE_KEY }}" > $GITHUB_WORKSPACE/server.key
+          sf login org jwt --username minhthao56481dev@gmail.com -f server.key -i 3MVG9pRzvMkjMb6ksv3UngeW0pMGPTjwEyGUyZsUMkQTUOiEL5vehnbrPlIvyIA8zU69YZWwmql3tTzI2BERu --instance-url https://manabie8-dev-ed.develop.my.salesforce.com --alias dev_org_v8
+
+      - name: Create package
+        run: |
+          sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
+
+      - name: Create version
+        run: |
+          sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
+
+      - name: Create version
+        run: |
+          sfdx force:package:install --package "usermgmt@0.1.0-1" -o  dev_org_v8 --installationkey test1234 --wait 10 --publishwait 10
