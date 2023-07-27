@@ -35,13 +35,13 @@ jobs:
             ./scripts/check_existing_package.bash
 
       - name: Create package
-        if: env.PACKAGE_EXISTS == 'false'
+        if: $PACKAGE_EXISTS == 'false'
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
 
       - name: Create version
         run: |
-          echo $env.PACKAGE_EXISTS
+          echo $PACKAGE_EXISTS
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
       - name: Install package
