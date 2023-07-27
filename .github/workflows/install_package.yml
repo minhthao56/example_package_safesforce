@@ -31,14 +31,8 @@ jobs:
 
       - name: Check existing package
         run: | 
-              packageList=$(sfdx force:package:list --json)
-              if echo "$packageList" | jq -e ".result | map(select(.Name == \"usermgmt")) | length == 1" > /dev/null; then
-                echo "Package already exists"
-                export PACKAGE_EXISTS=true
-              else
-                echo "Package does not exist"
-                export PACKAGE_EXISTS=false
-              fi
+            chmod +x ./scripts/check_existing_package.bash
+            ./scripts/check_existing_package.bash
 
       - name: Create package
         if: env.PACKAGE_EXISTS == 'false'
