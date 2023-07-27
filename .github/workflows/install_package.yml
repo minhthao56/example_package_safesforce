@@ -41,7 +41,7 @@ jobs:
 
       - name: Create version
         run: |
-          echo "env.PACKAGE_EXISTS"
+          echo $env.PACKAGE_EXISTS
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
       - name: Install package

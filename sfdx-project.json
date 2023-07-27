@@ -1,7 +1,11 @@
 {
   "packageDirectories": [
     {
-      "path": "usermgmt"
+      "path": "usermgmt",
+      "package": "usermgmt",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": ""
     },
     {
       "path": "notimgmt"
@@ -12,5 +16,8 @@
   ],
   "name": "manabie",
   "namespace": "",
-  "sourceApiVersion": "58.0"
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "usermgmt": "0Ho5j000000Gn7rCAC"
+  }
 }
