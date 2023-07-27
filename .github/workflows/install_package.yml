@@ -26,8 +26,8 @@ jobs:
 
       - name: Change default path
         run: | 
-          chmod +x scripts/change_default_path.bash usermgmt
-          ./scripts/change_default_path.bash
+          chmod +x scripts/change_default_path.bash
+          ./scripts/change_default_path.bash usermgmt
       - name: Create package
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
