@@ -40,8 +40,8 @@ jobs:
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
 
       - name: Create version
-        if: env.PACKAGE_EXISTS == 'true'
         run: |
+          echo "env.PACKAGE_EXISTS"
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
       - name: Install package
