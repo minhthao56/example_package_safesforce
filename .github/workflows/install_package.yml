@@ -24,6 +24,10 @@ jobs:
           echo "${{ secrets.JWT_PRIVATE_KEY }}" > $GITHUB_WORKSPACE/server.key
           sf login org jwt --username minhthao56481dev@gmail.com -f server.key -i 3MVG9pRzvMkjMb6ksv3UngeW0pMGPTjwEyGUyZsUMkQTUOiEL5vehnbrPlIvyIA8zU69YZWwmql3tTzI2BERu --instance-url https://manabie8-dev-ed.develop.my.salesforce.com --alias dev_org_v8
 
+      - name: Change default path
+        run: | 
+          chmod +x scripts/change_default_path.bash usermgmt
+          ./scripts/change_default_path.bash
       - name: Create package
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
