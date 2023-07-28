@@ -39,10 +39,15 @@ jobs:
         if: steps.check_package.outputs.package_exists == 'false'
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
-
+    
+      - name: Update package aliases
+        if: steps.check_package.outputs.package_exists == 'true'
+        run: |
+            chmod +x ./scripts/update_package_aliases.bash
+            ./scripts/update_package_aliases.bash usermgmt
       - name: Create version
         run: |
-          echo $steps.check_package.outputs.package_exists
+          echo "PACKAGE_EXISTS is ${{ steps.check_package.outputs.package_exists }}"
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
       - name: Install package
