@@ -30,18 +30,19 @@ jobs:
           ./scripts/change_default_path.bash usermgmt
 
       - name: Check existing package
+        id: check_package
         run: | 
             chmod +x ./scripts/check_existing_package.bash
-            ./scripts/check_existing_package.bash
+            echo "::set-output name=package_exists::$(./scripts/check_existing_package.bash)"
 
       - name: Create package
-        if: $PACKAGE_EXISTS == 'false'
+        if: steps.check_package.outputs.package_exists == 'false'
         run: |
           sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
 
       - name: Create version
         run: |
-          echo $PACKAGE_EXISTS
+          echo $steps.check_package.outputs.package_exists
           sfdx force:package:version:create --package "usermgmt" --installationkey test1234 --wait 10 -v dev_org_v8
 
       - name: Install package

@@ -1,0 +1,1 @@
+sfdx force:package:list -v dev_org_v8 --json > packageList.json
