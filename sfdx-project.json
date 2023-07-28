@@ -5,7 +5,8 @@
       "package": "usermgmt",
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
-      "versionDescription": ""
+      "versionDescription": "",
+      "default": true
     },
     {
       "path": "notimgmt"
