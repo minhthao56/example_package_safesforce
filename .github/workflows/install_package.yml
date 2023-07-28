@@ -27,7 +27,7 @@ jobs:
       - name: Change default path
         run: | 
           chmod +x scripts/change_default_path.bash
-          ./scripts/change_default_path.bash usermgmt
+          ./scripts/change_default_path.bash payment
 
       - name: Check existing package
         id: check_package
@@ -38,17 +38,17 @@ jobs:
       - name: Create package
         if: steps.check_package.outputs.package_exists == 'false'
         run: |
-          sfdx force:package:create --name "usermgmt" --path usermgmt --packagetype Unlocked -v dev_org_v8
+          sfdx force:package:create --name "payment" --path payment --packagetype Unlocked -v dev_org_v8
     
       - name: Update package aliases
         if: steps.check_package.outputs.package_exists == 'true'
         run: |
             chmod +x ./scripts/update_package_aliases.bash
-            ./scripts/update_package_aliases.bash usermgmt
+            ./scripts/update_package_aliases.bash payment
       - name: Create version
         id: create_package_version
         run: |
-          package_version=$(sfdx force:package:version:create --package "usermgmt" --installation-key-bypass --wait 10 -v dev_org_v8 --json)
+          package_version=$(sfdx force:package:version:create --package "payment" --installation-key-bypass --wait 10 -v dev_org_v8 --skip-validation --json)
           package_version_id=$(echo $package_version | jq -r '.result.SubscriberPackageVersionId')
           echo "::set-output name=package_version_id::$package_version_id"
 
