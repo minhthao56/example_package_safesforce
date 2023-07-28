@@ -6,7 +6,7 @@ const namePath = process.argv[2];
 
 const packageListJSON = JSON.parse(packageList)
 const fileJSON = JSON.parse(sfdxProjectJson)
-const id = packageListJSON.result.find((item) => item.path === namePath).Id;
+const id = packageListJSON.result.find((item) => item.Name === namePath).Id;
 fileJSON.packageAliases[namePath] = id;
 
 const updatedJSON = JSON.stringify(fileJSON, null, 2);
