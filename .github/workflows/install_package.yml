@@ -48,10 +48,10 @@ jobs:
       - name: Create version
         id: create_package_version
         run: |
-          package_version=$(sfdx force:package:version:create --package "usermgmt" --installation-key test1234 --wait 10 -v dev_org_v8 --json)
-          package_version_id=$(echo $package_version | jq -r '.result.Id')
+          package_version=$(sfdx force:package:version:create --package "usermgmt" --installation-key-bypass --wait 10 -v dev_org_v8 --json)
+          package_version_id=$(echo $package_version | jq -r '.result.SubscriberPackageVersionId')
           echo "::set-output name=package_version_id::$package_version_id"
 
       - name: Install package
         run: |
-          sfdx force:package:install --package ${{ steps.create_package_version.outputs.package_version_id }} -o  dev_org_v8 --installationkey test1234 --wait 10 --publishwait 10
+          sfdx force:package:install --package ${{ steps.create_package_version.outputs.package_version_id }} -o  dev_org_v8 --wait 10 --publishwait 10

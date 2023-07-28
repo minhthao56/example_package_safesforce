@@ -5,6 +5,7 @@
     <members>Users__c</members>
     <members>Staff__c</members>
     <members>Students__c</members>
+    <members>UserGroup__c</members>
   </types>
   <version>58.0</version>
 </Package>
