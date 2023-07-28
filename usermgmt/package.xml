@@ -4,6 +4,7 @@
     <name>CustomObject</name>
     <members>Users__c</members>
     <members>Staff__c</members>
+    <members>Students__c</members>
   </types>
   <version>58.0</version>
 </Package>
