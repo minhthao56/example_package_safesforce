@@ -23,6 +23,8 @@ public with sharing class TriggerAfterCreateContactTest {
         assert.areEqual(lastName, contactFirst.LastName, 'We expected the last name to be ' + lastName);
         assert.areEqual(email.toLowerCase(), contactFirst.Email.toLowerCase(), 'We expected the email to be ' + email);
         assert.areEqual(department, contactFirst.Department, 'We expected the department to be ' + department);
+        // print out the contact id
+        System.debug('Contact Id: ' + contactFirst.Id);
     }
 
     private static String generateRandomString(Integer length) {

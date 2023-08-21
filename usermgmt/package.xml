@@ -19,6 +19,10 @@
     <name>FlexiPage</name>
       <members>	Test_Users</members>
   </types>
+   <types>
+    <name>CustomTab</name>
+      <members>	Test_Users</members>
+  </types>
   <types>
     <name>Flow</name>
       <members>Trigger_After_Create_Contact</members>
