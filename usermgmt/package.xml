@@ -17,15 +17,16 @@
   </types>
   <types>
     <name>FlexiPage</name>
-      <members>	Test_Users</members>
+      <members>Test_Users</members>
+      <members>Test_Users_UtilityBar</members>
   </types>
    <types>
     <name>CustomTab</name>
-      <members>	Test_Users</members>
+      <members>Test_Users</members>
   </types>
    <types>
     <name>CustomApplication</name>
-      <members>	Test_Users</members>
+      <members>Test_Users</members>
   </types>
   <types>
     <name>Flow</name>
