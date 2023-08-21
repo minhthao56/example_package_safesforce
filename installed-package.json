@@ -1,0 +1,54 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "Id": "0A35j000001tl5bCAA",
+      "SubscriberPackageId": "0332E000000U76DQAS",
+      "SubscriberPackageName": "Launch Flow Modal",
+      "SubscriberPackageNamespace": "sf_flowmodal",
+      "SubscriberPackageVersionId": "04t2E000003VsuMQAS",
+      "SubscriberPackageVersionName": "Launch Flow Modal",
+      "SubscriberPackageVersionNumber": "1.14.0.1"
+    },
+   
+    {
+      "Id": "0A35j000001tlF7CAI",
+      "SubscriberPackageId": "0336g000000HSllAAG",
+      "SubscriberPackageName": "Test Gen",
+      "SubscriberPackageNamespace": "tgn",
+      "SubscriberPackageVersionId": "04t6g000008s7B2AAI",
+      "SubscriberPackageVersionName": "Spring 2023",
+      "SubscriberPackageVersionNumber": "1.231.0.2"
+    },
+    {
+        "Id": "0A35j000001tjJkCAI",
+        "SubscriberPackageId": "033f4000000mjNrAAI",
+        "SubscriberPackageName": "FlowScreenComponentsBasePack",
+        "SubscriberPackageNamespace": null,
+        "SubscriberPackageVersionId": "04t5G000003zgZLQAY",
+        "SubscriberPackageVersionName": "3.2.2.0",
+        "SubscriberPackageVersionNumber": "3.2.2.0"
+      },
+    {
+      "Id": "0A35j000001tjJfCAI",
+      "SubscriberPackageId": "0338b000000khTgAAI",
+      "SubscriberPackageName": "FlowActionsBasePack",
+      "SubscriberPackageNamespace": "usf3",
+      "SubscriberPackageVersionId": "04t8b000001BTgsAAG",
+      "SubscriberPackageVersionName": "versionName",
+      "SubscriberPackageVersionNumber": "3.15.0.0"
+    },
+    {
+        "Id": "0A35j000001tjJzCAI",
+        "SubscriberPackageId": "0335G000000ik1VQAQ",
+        "SubscriberPackageName": "DataMapper",
+        "SubscriberPackageNamespace": null,
+        "SubscriberPackageVersionId": "04t5G000003rUwYQAU",
+        "SubscriberPackageVersionName": "version",
+        "SubscriberPackageVersionNumber": "3.0.0.0"
+      }
+  ],
+  "warnings": [
+    "The \"force package installed list\" command has been deprecated. Use \"package installed list\" instead."
+  ]
+}
