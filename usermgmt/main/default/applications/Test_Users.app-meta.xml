@@ -12,7 +12,6 @@
     <label>Test_Users</label>
     <navType>Standard</navType>
     <tabs>Test_Users</tabs>
-    <tabs>test_web</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Test_Users_UtilityBar</utilityBar>
 </CustomApplication>
