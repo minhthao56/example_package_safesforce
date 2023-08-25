@@ -8,6 +8,10 @@
       <members>UserGroup__c</members>
   </types>
   <types>
+      <members>Account.AllAccounts</members> 
+      <name>ListView</name>
+  </types>
+  <types>
     <name>ApexClass</name>
       <members>JSONToCollection</members>
       <members>JSONToCollectionTest</members>
